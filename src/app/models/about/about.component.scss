@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.isImportant {
+  color: rgb(255, 0, 0);
+}
+
+main {
+  background: url("https://a-static.besthdwallpaper.com/campagne-fond-d-ecran-3554x1999-3087_53.jpg")
+      center,
+    center/cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(0, 0, 0);
+}

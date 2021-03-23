@@ -1,0 +1,104 @@
+<main>
+  <article>
+    <label for="name">Veuillez renseigner votre nom :</label>
+    <input [(ngModel)]="name" placeholder="Customer" />
+
+    <h2>Bienvenue {{ name }} sur notre site de vente de chevaux d'occasion</h2>
+
+    <div class="text">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quis
+        obcaecati esse veniam exercitationem sit consequatur! Eius, recusandae.
+        Quibusdam recusandae similique esse fuga suscipit incidunt. Quod
+        assumenda dolore sint ratione?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+        explicabo culpa exercitationem veritatis similique aspernatur ipsum,
+        natus mollitia quia, laudantium aut tempora beatae labore consequatur
+        dolorum nam fuga unde. Atque?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+        explicabo culpa exercitationem veritatis similique aspernatur ipsum,
+        natus mollitia quia, laudantium aut tempora beatae labore consequatur
+        dolorum nam fuga unde. Atque?
+      </p>
+    </div>
+
+    <div class="text">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quis
+        obcaecati esse veniam exercitationem sit consequatur! Eius, recusandae.
+        Quibusdam recusandae similique esse fuga suscipit incidunt. Quod
+        assumenda dolore sint ratione?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+        explicabo culpa exercitationem veritatis similique aspernatur ipsum,
+        natus mollitia quia, laudantium aut tempora beatae labore consequatur
+        dolorum nam fuga unde. Atque?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+        explicabo culpa exercitationem veritatis similique aspernatur ipsum,
+        natus mollitia quia, laudantium aut tempora beatae labore consequatur
+        dolorum nam fuga unde. Atque?
+      </p>
+    </div>
+
+    <div class="horseList">
+      <h3>Liste de marques de chevaux :</h3>
+      <div *ngFor="let horse of horses">
+        <a href="https://www.findus.fr/" target="_blank"
+          >{{ horse }} <img [src]="" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <button (click)="switchStateAdmin()">Déconseillé aux mineurs</button>
+
+    <div *ngIf="!isAdmin" class="textBottom">
+      <p>
+        Le coup de grisou est une explosion accidentelle de gaz dans une mine.
+        Cette explosion est liée à l'exploitation de la mine et est suivie d'un
+        dégagement dit « instantané » de gaz (DI). Il s'agit d'un accident
+        souvent mortel, parmi les plus redoutés des mineurs, en général aggravé
+        par un effondrement des galeries et parfois par un « coup de poussière
+        », si bien qu'il est souvent difficile de savoir après-coup si c'est le
+        gaz ou la poussière qui a provoqué la catastrophe. Son apparition est
+        restée très mal comprise et donc difficile à prévenir jusqu'à la fin des
+        années 1950. Trois études européennes aideront à mieux comprendre ce
+        phénomène : En 1959, la CECA a financé un programme de recherche
+        franco-belge porté par le Centre d'Études et Recherches des Charbonnages
+        de France (CERCHAR) et par l'Institut National de l'Industrie
+        charbonnière belge (INICHAR), pour le bassin houiller franco-belge
+        profond qui connaissait de dangereux et fréquents dégagements
+        instantanés de grisou5. En 1967, malgré 8 ans d'études, les experts de
+        la CECA considéraient que le problème de la prévention n'était pas
+        encore résolu. En 1961, la CECA encourage et finance une autre grande
+        étude, sur la composition du grisou, la forme et le volume du gisement
+        susceptible de dégazer, de débit de dégazage et la capacité
+        d'adsorption/désorption32. On se dit en effet que la capacité (qui peut
+        être étudiée en laboratoire33) d'un charbon à adsorber du méthane dans
+        certaines conditions de température, humidité, pression... peut être
+        indicatrice de sa capacité à le relarguer dans les mêmes conditions34
+        des différents types de charbon ; selon le contexte et selon leur degré
+        de houillification5. Cette étude sera exécutée par le CERCHAR,
+        l'INICHAR, et la section de recherches des Mines d’État hollandaises
+        (Steinkohlenbergbauverein)5. En 1964, une troisième étude concernera «
+        l'origine du grisou particulièrement abondant dans les mines de la
+        Sarre; le problème de la migration du grisou sur des distances plus ou
+        moins grandes ; la possibilité de l'étude, par le calcul, de
+        l'écoulement du grisou dans le massif et vers les chantiers ».
+      </p>
+      <img [src]="minePicture" alt="grisouAttack" />
+    </div>
+
+    <button (click)="horseSurprise()">
+      Cliquez ici pour voir le futur des chevaux
+    </button>
+  </article>
+</main>
